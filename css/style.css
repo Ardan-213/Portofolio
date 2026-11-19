@@ -1,0 +1,28 @@
+body {
+background-color: #f8fafc;
+color: #1e293b;
+}
+
+/* Glassmorphism Card Style */
+.glass-card {
+background: rgba(255, 255, 255, 0.85);
+backdrop-filter: blur(12px);
+border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Linear Gradient Text Highlight */
+.gradient-text {
+background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+/* Hero Section Gradient Background */
+.gradient-bg {
+background: linear-gradient(135deg, #e0effe 0%, #f0f7ff 50%, #ffffff 100%);
+}
+
+/* Smooth Scrolling Offset for Fixed Navbar */
+html {
+scroll-padding-top: 5rem;
+}
