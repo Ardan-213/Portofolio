@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duta Ardan | Software Developer & Data Analyst Portfolio</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            200: '#bae0fd',
+                            300: '#7cc5fb',
+                            400: '#36a9f7',
+                            500: '#0c8de9',
+                            600: '#006ec7',
+                            700: '#0058a3',
+                            800: '#054b85',
+                            900: '#0a3f6f',
+                            950: '#072849',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS File Link -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans antialiased text-slate-700 selection:bg-brand-500 selection:text-white">
+
+    <!-- NAVIGATION BAR -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <!-- Logo / Brand -->
+                <a href="#hero" class="font-heading font-bold text-xl text-slate-800 tracking-tight flex items-center gap-2">
+                    <span class="w-9 h-9 rounded-xl bg-brand-500 text-white flex items-center justify-center font-bold text-lg shadow-md shadow-brand-500/20">DA</span>
+                    <span>Duta Ardan</span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                    <a href="#about" class="hover:text-brand-600 transition-colors">Tentang Saya</a>
+                    <a href="#experience" class="hover:text-brand-600 transition-colors">Pengalaman</a>
+                    <a href="#projects" class="hover:text-brand-600 transition-colors">Portofolio & Project</a>
+                    <a href="#certificates" class="hover:text-brand-600 transition-colors">Sertifikat & Organisasi</a>
+                    <a href="#contact" class="hover:text-brand-600 transition-colors">Kontak</a>
+                </div>
+
+                <!-- Action Button -->
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="#contact" class="px-5 py-2.5 rounded-full bg-brand-600 text-white font-medium text-sm hover:bg-brand-700 transition-all shadow-md shadow-brand-600/20 active:scale-95">
+                        Hubungi Saya
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-600 hover:text-brand-600 hover:bg-slate-100 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 bg-white px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">Tentang Saya</a>
+            <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">Pengalaman</a>
+            <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">Portofolio & Project</a>
+            <a href="#certificates" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">Sertifikat & Organisasi</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-32 gradient-bg relative overflow-hidden">
+        <div class="absolute top-20 right-10 w-96 h-96 bg-brand-200/40 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+        <div class="absolute bottom-10 left-10 w-80 h-80 bg-brand-100/60 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-100/80 border border-brand-200 text-brand-700 text-xs sm:text-sm font-semibold tracking-wide uppercase shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-brand-500 animate-ping"></span>
+                        S1 Informatika &bull; Data & Web Specialist
+                    </div>
+                    
+                    <h1 class="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-slate-900 leading-tight">
+                        <span class="gradient-text">PORTOFOLIO</span>
+                    </h1>
+
+                    <p class="text-slate-600 text-base sm:text-lg max-w-2xl leading-relaxed mx-auto lg:mx-0">
+                        Halo! Saya <strong class="text-slate-800">Duta Ardan</strong>, seorang lulusan Informatika Universitas Bandar Lampung yang berfokus pada pengembangan sistem Web Laravel, JS, MySQL serta pengolahan atau analisis data Power BI, Python & AI.
+                    </p>
+
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#projects" class="px-7 py-3.5 rounded-full bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm shadow-lg shadow-brand-600/30 transition-all transform hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-2">
+                            <span>Lihat Portfolio</span>
+                            <i class="fa-solid fa-arrow-down text-xs"></i>
+                        </a>
+                        
+                    </div>
+
+                    <div class="pt-8 border-t border-slate-200/80 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <div class="font-heading text-2xl sm:text-3xl font-bold text-slate-900">3.64</div>
+                            <div class="text-xs text-slate-500 font-medium">IPK (S1 Informatika)</div>
+                        </div>
+                        <div>
+                            <div class="font-heading text-2xl sm:text-3xl font-bold text-slate-900">5+</div>
+                            <div class="text-xs text-slate-500 font-medium">Project Web, UI & Data</div>
+                        </div>
+                        <div>
+                            <div class="font-heading text-2xl sm:text-3xl font-bold text-slate-900">4+</div>
+                            <div class="text-xs text-slate-500 font-medium">Sertifikasi Keahlian</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 flex justify-center">
+    <div class="relative w-full max-w-md group">
+        <div class="absolute -inset-1.5 bg-gradient-to-r from-brand-400 to-brand-700 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
+
+        <div class="relative bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden text-center">
+            <div class="relative w-full h-[380px] sm:h-[450px] overflow-hidden">
+                <img
+                    src="images/foto1.jpg"
+                    alt="Foto Profil"
+                    class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                    onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Duta+Ardan&background=0284c7&color=fff&size=512';"
+                >
+
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent"></div>
+
+                <div class="absolute bottom-4 left-4 right-4 text-left text-white">
+                </div>
+            </div>
+
+            <div class="p-6">
+                <h3 class="font-heading font-bold text-2xl text-slate-800">
+                    Duta Ardan, S.Kom
+                </h3>
+
+                <p class="text-sm text-brand-600 font-semibold mt-1">
+                    Data Science | Data Analyst | Web Developer
+                </p>
+
+                <p class="text-sm text-slate-500 mt-2">
+                    <i class="fa-solid fa-location-dot mr-1"></i>
+                    Bandar Lampung, Indonesia
+                </p>
+
+                <div class="flex items-center justify-center gap-3 mt-5">
+                    <a href="https://www.linkedin.com/in/duta-ardan27"
+                       target="_blank" rel="noopener noreferrer"
+                       aria-label="LinkedIn"
+                       class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 hover:bg-brand-600 hover:text-white flex items-center justify-center transition-all">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="mailto:dutaardan635@gmail.com"
+                       aria-label="Email"
+                       class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 hover:bg-brand-600 hover:text-white flex items-center justify-center transition-all">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                </div>
+
+                <div class="mt-6 pt-5 border-t border-slate-100 grid grid-cols-2 gap-3 text-xs text-slate-500 font-medium">
+                    <div>
+                        <i class="fa-solid fa-graduation-cap text-brand-500 mr-1"></i>
+                        Informatika UBL
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-laptop-code text-brand-500 mr-1"></i>
+                        Technology
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+     
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-semibold uppercase text-brand-600 tracking-wider mb-2">Profil Ringkas</h2>
+                <p class="font-heading font-bold text-3xl sm:text-4xl text-slate-900">Kombinasi Rekayasa Perangkat Lunak & Analisis Data</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+
+    <!-- FOTO DAN DESKRIPSI -->
+    <div class="space-y-6">
+
+        <div class="relative rounded-3xl overflow-hidden shadow-lg group">
+            <img
+                src="images/duduk_dahareun.jpeg"
+                alt="Aktivitas Duta Ardan"
+                class="w-full h-[300px] sm:h-[400px] object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                onerror="this.onerror=null; this.src='https://placehold.co/800x600/e0effe/0058a3?text=Foto+Aktivitas';"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"></div>
+        </div>
+
+        <div class="bg-slate-50 p-7 rounded-3xl border border-slate-100">
+            <h3 class="font-heading font-bold text-xl text-slate-800 mb-4 text-center">
+                <i class="fa-solid fa-user-gear text-brand-600 mr-2"></i>
+                Latar Belakang
+            </h3>
+
+            <p class="text-slate-600 leading-relaxed mb-4">
+                Lulusan S1 Informatika Universitas Bandar Lampung dengan IPK 3.64/4.00. Memiliki ketertarikan pada pengembangan aplikasi web, analisis data, dan desain antarmuka pengguna.
+            </p>
+
+            <p class="text-slate-600 leading-relaxed">
+                Terbiasa mengembangkan proyek menggunakan Laravel, MySQL, JavaScript, dan Python, serta membuat visualisasi data menggunakan Power BI. Pengalaman kerja dan organisasi turut membangun kemampuan komunikasi, koordinasi, kerja sama tim, serta penyelesaian masalah.
+            </p>
+
+            <div class="mt-6 flex flex-wrap gap-2">
+                <span class="px-3 py-1.5 rounded-lg bg-white border text-xs font-semibold">Laravel</span>
+                <span class="px-3 py-1.5 rounded-lg bg-white border text-xs font-semibold">MySQL</span>
+                <span class="px-3 py-1.5 rounded-lg bg-white border text-xs font-semibold">Power BI</span>
+                <span class="px-3 py-1.5 rounded-lg bg-white border text-xs font-semibold">Python</span>
+                <span class="px-3 py-1.5 rounded-lg bg-white border text-xs font-semibold">Figma</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- PENDIDIKAN DAN KEAHLIAN -->
+    <div class="space-y-6">
+
+        <div class="p-7 rounded-3xl bg-white border border-slate-200 shadow-sm">
+            <span class="text-xs font-bold text-brand-600 uppercase tracking-wide">Pendidikan</span>
+
+            <h3 class="font-heading font-bold text-xl text-slate-800 mt-2">
+                S1 Informatika
+            </h3>
+
+            <p class="text-slate-600 text-sm mt-1">
+                Universitas Bandar Lampung
+            </p>
+
+            <div class="flex justify-between items-center mt-5">
+                <span class="text-sm text-slate-500">2022 – 2026</span>
+                <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 text-xs font-bold">
+                    IPK 3.64 / 4.00
+                </span>
+            </div>
+
+            <div class="mt-5 pt-5 border-t border-slate-100">
+                <p class="text-sm font-semibold text-slate-700 mb-2">Tugas Akhir</p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Sistem Presensi Berbasis Face Recognition Dan Geofencing
+                </p>
+            </div>
+        </div>
+
+        <div class="p-7 rounded-3xl bg-white border border-slate-200 shadow-sm">
+            <h3 class="font-heading font-bold text-lg text-slate-800 mb-5">
+                Keahlian Teknis
+            </h3>
+
+            <div class="space-y-5">
+                <div>
+                    <div class="flex justify-between text-sm font-semibold text-slate-700 mb-2">
+                        <span>Web Development</span>
+                        <span>Laravel, PHP, MySQL, JavaScript</span>
+                    </div>
+                    <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                        <div class="h-full w-[90%] bg-brand-500 rounded-full"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex justify-between text-sm font-semibold text-slate-700 mb-2">
+                        <span>Data Analytics</span>
+                        <span>Power BI, Python</span>
+                    </div>
+                    <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                        <div class="h-full w-[85%] bg-brand-400 rounded-full"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex justify-between text-sm font-semibold text-slate-700 mb-2">
+                        <span>UI/UX Design</span>
+                        <span>Figma, Prototyping</span>
+                    </div>
+                    <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                        <div class="h-full w-[80%] bg-brand-600 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="py-20 bg-slate-50 border-y border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-semibold uppercase text-brand-600 tracking-wider mb-2">Jejak Langkah</h2>
+                <p class="font-heading font-bold text-3xl sm:text-4xl text-slate-900">Pengalaman Kerja & Kepemimpinan</p>
+            </div>
+
+            <div class="relative border-l-2 border-brand-200 ml-4 md:ml-32 space-y-10">
+
+    <!-- PEACHY KEEN -->
+    <div class="relative pl-8 md:pl-10">
+        <div class="absolute -left-2.5 top-1.5 w-5 h-5 rounded-full bg-brand-600 border-4 border-white shadow"></div>
+
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition">
+
+    <!-- 2 Foto -->
+    <div class="grid grid-cols-2">
+        <img src="images/keen.jpeg"
+             alt="Captain Server di Peachy Keen"
+             loading="lazy"
+             class="w-full h-48 sm:h-52 object-cover">
+        <img src="images/keen2.jpeg"
+             alt="Kegiatan di Peachy Keen"
+             loading="lazy"
+             class="w-full h-48 sm:h-52 object-cover">
+    </div>
+
+    <!-- Keterangan -->
+    <div class="p-6 sm:p-8">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+            <div>
+                <span class="text-xs font-bold text-brand-600 uppercase tracking-wide">Pengalaman Kerja</span>
+                <h3 class="font-heading font-bold text-xl text-slate-800 mt-1">Captain Server</h3>
+                <p class="text-slate-600 text-sm font-medium">Peachy Keen</p>
+            </div>
+            <span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded-full w-max">
+                Feb 2026 – Okt 2026
+            </span>
+        </div>
+
+        <ul class="text-slate-600 text-sm space-y-2 list-disc list-inside leading-relaxed">
+            <li>Mengoordinasikan 4 anggota tim service selama operasional harian berlangsung</li>
+            <li>Memastikan pesanan pelanggan disajikan sesuai pesanan dan standar pelayanan</li>
+            <li>Menangani keluhan pelanggan serta berkoordinasi dengan tim terkait untuk menyelesaikan kendala pelayanan.</li>
+        </ul>
+    </div>
+</div>
+    </div>
+
+    <!-- TUNAS DWIPA MATRA -->
+    <div class="relative pl-8 md:pl-10">
+        <div class="absolute -left-2.5 top-1.5 w-5 h-5 rounded-full bg-brand-400 border-4 border-white shadow"></div>
+
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition">
+            <div class="p-6 sm:p-8">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                    <div>
+                        <span class="text-xs font-bold text-brand-600 uppercase tracking-wide">Magang</span>
+                        <h3 class="font-heading font-bold text-xl text-slate-800 mt-1">Digital Marketing Intern</h3>
+                        <p class="text-slate-600 text-sm font-medium">Tunas Dwipa Matra</p>
+                    </div>
+                    <span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded-full w-max">
+                        Jun 2025 – Ags 2025
+                    </span>
+                </div>
+
+                <ul class="text-slate-600 text-sm space-y-2 list-disc list-inside leading-relaxed">
+                    <li>Membantu pengelolaan konten pemasaran digital melalui media sosial</li>
+                    <li>Membuat materi promosi digital seperti poster dan konten visual</li>
+                    <li>Berkoordinasi dengan tim sales dalam mendukung aktivitas promosi produk.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<!-- PKM PENGABDIAN KEPADA MASYARAKAT -->
+<div class="relative pl-8 md:pl-10">
+    <div class="absolute -left-2.5 top-1.5 w-5 h-5 rounded-full bg-slate-400 border-4 border-white shadow"></div>
+
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition">
+
+        <!-- 2 Foto -->
+        <div class="grid grid-cols-2">
+            <img src="images/pkm1.jpg"
+                 alt="Penyampaian alat IoT penyiraman otomatis kepada warga Tanjung Seneng"
+                 loading="lazy"
+                 class="w-full h-48 sm:h-52 object-cover">
+            <img src="images/pkm2.jpg"
+                 alt="Praktik alat IoT pada tanaman cabai"
+                 loading="lazy"
+                 class="w-full h-48 sm:h-52 object-cover">
+        </div>
+
+        <!-- Keterangan -->
+        <div class="p-6 sm:p-8">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                <div>
+                    <span class="text-xs font-bold text-brand-600 uppercase tracking-wide">Pengabdian Kepada Masyarakat</span>
+                    <h3 class="font-heading font-bold text-xl text-slate-800 mt-1">Ketua Tim Pengabdian Kepada Masyarakat</h3>
+                    <p class="text-slate-600 text-sm font-medium">Universitas Bandar Lampung</p>
+                </div>
+                <span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded-full w-max">
+                    Jun 2024
+                </span>
+            </div>
+
+            <ul class="text-slate-600 text-sm space-y-2 list-disc list-inside leading-relaxed">
+                <li>Memimpin tim dalam pelaksanaan PKM serta sosialisasi alat IoT penyiraman otomatis di Tanjung Seneng, Bandar Lampung</li>
+                <li>Menyiapkan alat berbasis Arduino dan sensor kelembaban tanah, lalu mempraktikkannya langsung pada tanaman cabai</li>
+                <li>Menyampaikan manfaat dan cara penggunaan alat kepada petani dan warga, serta menyusun laporan kegiatan.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</div>
+    </section>
+
+    <!-- PROJECTS & POWER BI SECTION -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-semibold uppercase text-brand-600 tracking-wider mb-2">Portofolio Karya</h2>
+                <p class="font-heading font-bold text-3xl sm:text-4xl text-slate-900">UI/UX Design, Software Web & Data Analytics</p>
+                <p class="text-slate-600 text-sm mt-3">Kumpulan proyek perancangan antarmuka digital (Figma), aplikasi web (Laravel/JS), dan visualisasi data interaktif.</p>
+            </div>
+
+            <!-- UI/UX FIGMA PROJECTS SUB-SECTION -->
+            <div class="mb-20">
+                <h3 class="font-heading font-bold text-2xl text-slate-800 mb-6 flex items-center gap-2">
+                    <i class="fa-brands fa-figma text-brand-600"></i>
+                    UI/UX Design & Prototyping (Figma)
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="px-3 py-1 bg-brand-100 text-brand-700 rounded-full text-xs font-bold">Mobile App Design</span>
+                                <span class="text-xs text-slate-500 font-mono"><i class="fa-brands fa-figma text-brand-600 mr-1"></i>Figma Prototype</span>
+                            </div>
+                            <h4 class="font-heading font-bold text-xl text-slate-800 mb-2">Aplikasi Service Center Elektronik</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                                Perancangan antarmuka mobile application untuk pemesanan jasa perbaikan elektronik (Laptop, Handphone, AC). Dilengkapi alur sistem login, katalog teknisi berpengalaman, rating jasa, dan pemesanan layanan.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="px-2 py-0.5 bg-white border border-slate-200 text-slate-700 text-[11px] font-medium rounded">Wireframing</span>
+                                <span class="px-2.5 py-0.5 bg-white border border-slate-200 text-slate-700 text-[11px] font-medium rounded">Mobile UI</span>
+                                <span class="px-2.5 py-0.5 bg-white border border-slate-200 text-slate-700 text-[11px] font-medium rounded">User Flow</span>
+                            </div>
+                        </div>
+
+                        <div class="px-6 pb-6">
+                            <div class="relative rounded-xl overflow-hidden border border-slate-200 shadow-inner group">
+                                <img src="images/figmaardan.jpg" alt="Figma UI UX Service Center Mobile App Duta Ardan" class="w-full h-56 object-cover object-left-top group-hover:scale-105 transition-transform duration-500" onError="this.onerror=null; this.src='https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=800&q=80';">
+                                <div class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <span class="px-4 py-2 bg-white/90 text-slate-900 font-semibold rounded-full text-xs shadow-md">
+                                        <i class="fa-brands fa-figma mr-1 text-brand-600"></i> Lihat Design Mobile Flow
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="px-3 py-1 bg-brand-100 text-brand-700 rounded-full text-xs font-bold">E-Commerce UI</span>
+                                <span class="text-xs text-slate-500 font-mono"><i class="fa-brands fa-figma text-brand-600 mr-1"></i>Figma Design</span>
+                            </div>
+                            <h4 class="font-heading font-bold text-xl text-slate-800 mb-2">Design & Alur E-Commerce App</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                                Eksplorasi antarmuka aplikasi e-commerce modern dengan fokus pada optimalisasi alur login, navigasi beranda promo, fitur feed rekomendasi, official store, hingga halaman wishlist & notifikasi belanja.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="px-2 py-0.5 bg-white border border-slate-200 text-slate-700 text-[11px] font-medium rounded">E-Commerce Flow</span>
+                                <span class="px-2.5 py-0.5 bg-white border border-slate-200 text-slate-700 text-[11px] font-medium rounded">Component Design</span>
+                                <span class="px-2.5 py-0.5 bg-white border border-slate-200 text-slate-700 text-[11px] font-medium rounded">High-Fidelity</span>
+                            </div>
+                        </div>
+
+                        <div class="px-6 pb-6">
+                            <div class="relative rounded-xl overflow-hidden border border-slate-200 shadow-inner group">
+                                <img src="images/figmaardan2.jpg" alt="Figma E-Commerce UI UX Mobile Design Duta Ardan" class="w-full h-56 object-cover object-left-top group-hover:scale-105 transition-transform duration-500" onError="this.onerror=null; this.src='https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80';">
+                                <div class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <span class="px-4 py-2 bg-white/90 text-slate-900 font-semibold rounded-full text-xs shadow-md">
+                                        <i class="fa-brands fa-figma mr-1 text-brand-600"></i> Lihat Preview High-Fidelity
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DATA ANALYTICS & POWER BI PROJECTS SUB-SECTION -->
+            <h3 class="font-heading font-bold text-2xl text-slate-800 mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-chart-pie text-brand-600"></i>
+                Data Analisis & Power BI
+            </h3>
+
+            <!-- FEATURED POWER BI PROJECT 1 -->
+            <div class="mb-8 bg-slate-900 rounded-3xl p-6 sm:p-10 text-white shadow-2xl relative overflow-hidden">
+                <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl"></div>
+
+                <div class="flex flex-col lg:flex-row items-center gap-8">
+                    <div class="lg:w-1/3 space-y-4">
+                        <span class="px-3 py-1 bg-brand-500/20 border border-brand-400/30 text-brand-300 rounded-full text-xs font-semibold inline-block">Project Power BI</span>
+                        <h3 class="font-heading font-bold text-2xl sm:text-3xl text-white">Destinasi Wisata 5 Kota Besar Pulau Jawa</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Dashboard interaktif Power BI yang menyajikan analisis komprehensif destinasi wisata di Jakarta, Bandung, Semarang, Surabaya, dan Yogyakarta berdasarkan rating, kategori lokasi, dan pemetaan geografis.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs font-mono">Power BI</span>
+                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs font-mono">Data Cleansing</span>
+                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs font-mono">GIS Mapping</span>
+                        </div>
+                    </div>
+
+                    <div class="lg:w-2/3 w-full bg-slate-800 rounded-2xl p-2 border border-slate-700 shadow-inner group">
+                        <div class="relative overflow-hidden rounded-xl">
+                            <img src="images/powerbi.png" alt="Screenshot Dashboard Power BI Tourism Data Analysis Duta Ardan" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" onError="this.onerror=null; this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80';">
+                            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="px-4 py-2 bg-white/90 text-slate-900 font-semibold rounded-full text-xs shadow-lg backdrop-blur">
+                                    <i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Interactive Power BI View
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16 bg-slate-900 rounded-3xl p-6 sm:p-10 text-white shadow-2xl relative overflow-hidden">
+                <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl"></div>
+
+                <div class="flex flex-col lg:flex-row items-center gap-8">
+                    <div class="lg:w-1/3 space-y-4">
+                        <span class="px-3 py-1 bg-brand-500/20 border border-brand-400/30 text-brand-300 rounded-full text-xs font-semibold inline-block">Project Power BI</span>
+                        <h3 class="font-heading font-bold text-2xl sm:text-3xl text-white">Visualisasi Data Sistem Pengiriman Barang</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Dashboard visualisasi analitik pengiriman barang logistik yang mencakup tren pengiriman, pilihan metode pembayaran, jenis layanan express, serta pemantauan status penyelesaian pengiriman secara real-time.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs font-mono">Power BI</span>
+                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs font-mono">Logistics Analytics</span>
+                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs font-mono">KPI Monitoring</span>
+                        </div>
+                    </div>
+
+                    <div class="lg:w-2/3 w-full bg-slate-800 rounded-2xl p-2 border border-slate-700 shadow-inner group">
+                        <div class="relative overflow-hidden rounded-xl">
+                            <img src="images/data_barang.png" alt="Screenshot Dashboard Power BI Pengiriman Barang Duta Ardan" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" onError="this.onerror=null; this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80';">
+                            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="px-4 py-2 bg-white/90 text-slate-900 font-semibold rounded-full text-xs shadow-lg backdrop-blur">
+                                    <i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Interactive Power BI View
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                
+            </div>
+
+            <div class="mb-16 bg-slate-900 rounded-3xl p-6 sm:p-10 text-white shadow-2xl relative overflow-hidden">
+                <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl"></div>
+
+                <div class="flex flex-col lg:flex-row items-center gap-8">
+                    <div class="lg:w-1/3 space-y-4">
+                        <span class="px-3 py-1 bg-brand-500/20 border border-brand-400/30 text-brand-300 rounded-full text-xs font-semibold inline-block">Project Power BI</span>
+                        <h3 class="font-heading font-bold text-2xl sm:text-3xl text-white">Visualisasi Dashboard Coffee</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Dashboard visualisasi analitik total pembayaran coffe, pilihan metode pembayaran, total transaksi, serta pemantauan profit penjualan.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs font-mono">Power BI</span>
+                        </div>
+                    </div>
+
+                    <div class="lg:w-2/3 w-full bg-slate-800 rounded-2xl p-2 border border-slate-700 shadow-inner group">
+                        <div class="relative overflow-hidden rounded-xl">
+                            <img src="images/powerbi.coffee.png" alt="Screenshot Dashboard Power BI Pengiriman Barang Duta Ardan" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" onError="this.onerror=null; this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80';">
+                            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="px-4 py-2 bg-white/90 text-slate-900 font-semibold rounded-full text-xs shadow-lg backdrop-blur">
+                                    <i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Interactive Power BI View
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SOFTWARE WEB PROJECTS GRID -->
+            <h3 class="font-heading font-bold text-2xl text-slate-800 mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-laptop-code text-brand-600"></i>
+                Software & Web Developer 
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Project 1: Skripsi -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                    <div class="p-6">
+                        <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center font-bold text-xl mb-4 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-face-smile-beam"></i>
+                        </div>
+                        <span class="text-xs font-semibold text-brand-600 uppercase tracking-wide">Skripsi / Tugas Akhir</span>
+                        <h4 class="font-heading font-bold text-lg text-slate-800 mt-1 mb-2">Presensi Face Recognition & Geofencing</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Pengembangan aplikasi web presensi berbasis pengenalan wajah (Face Recognition) dan pemetaan koordinat presisi (Geofencing GPS) untuk akurasi kehadiran real-time.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mt-3">
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">Laravel</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">JavaScript</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">Geofencing GPS</span>
+                        </div>
+                    </div>
+                    <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-xs font-medium text-slate-500">
+                        <span>Universitas Bandar Lampung</span>
+                        <span class="text-brand-600 font-semibold">2026</span>
+                    </div>
+                </div>
+
+                <!-- Project 2: E-Gudang -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                    <div class="p-6">
+                        <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center font-bold text-xl mb-4 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                        </div>
+                        <span class="text-xs font-semibold text-brand-600 uppercase tracking-wide">Web Application</span>
+                        <h3 class="font-heading font-bold ">
+                            <a href="https://github.com/Ardan-213/E-GUDANG-12"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                                https://github.com/Ardan-213/E-GUDANG-12
+                            </a>
+                        </h3>
+                        <h4 class="font-bold">Aplikasi Web E-Gudang</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Sistem inventarisasi barang pergudangan lengkap dengan fitur autentikasi, manajemen stok, dan operasi CRUD (Create, Read, Update, Delete) terstruktur.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mt-3">
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">Laravel 10</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">MySQL</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">Bootstrap/Tailwind</span>
+                        </div>
+                    </div>
+                    <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-xs font-medium text-slate-500">
+                        <span>Web Dev</span>
+                        <span class="text-brand-600 font-semibold">2025</span>
+                    </div>
+                </div>
+
+                <!-- Project  -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                    <div class="p-6">
+                        <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center font-bold text-xl mb-4 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-pills"></i>
+                        </div>
+                        <span class="text-xs font-semibold text-brand-600 uppercase tracking-wide">Web APPLICATION</span>
+                        <h3 class="font-heading font-bold ">
+                            <a href="https://github.com/Ardan-213/perpustakaan"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            https://github.com/Ardan-213/perpustakaan
+                            </a>
+                        </h3>
+                        <h4 class="font-heading font-bold text-lg text-slate-800 mt-1 mb-2">Sistem Perpustakaan</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Pengembangan aplikasi web manajemen data buku perpustakaan dengan fitur autentikasi, pencarian buku, peminjaman, pengembalian, dan laporan statistik koleksi buku
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mt-3">
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">Laravel 10</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">MySQL</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">CRUD</span>
+                        </div>
+                    </div>
+                    <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-xs font-medium text-slate-500">
+                        <span>Web Dev</span>
+                        <span class="text-brand-600 font-semibold">2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATES & ORGANIZATIONS SECTION -->
+    <section id="certificates" class="py-20 bg-slate-50 border-t border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-semibold uppercase text-brand-600 tracking-wider mb-2">Validasi & Rekam Jejak</h2>
+                <p class="font-heading font-bold text-3xl sm:text-4xl text-slate-900">
+                    Sertifikat, Organisasi & Penghargaan
+                </p>
+                <p class="text-slate-600 text-sm mt-3">
+                    Dokumentasi pelatihan kompetensi, pengalaman organisasi,
+                    serta pencapaian dalam kegiatan akademik dan perlombaan.
+                </p>
+            </div>
+
+            <!-- SUB-SECTION 1: SERTIFIKAT PELATIHAN & KOMPETENSI TEKNIS -->
+            <div class="mb-14">
+                <h3 class="font-heading font-bold text-xl text-slate-800 mb-6 flex items-center gap-2">
+                    <i class="fa-solid fa-certificate text-brand-600"></i>
+                    Sertifikat Pelatihan & Competency
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Sertifikat Komdigi Associate Data Scientist -->
+                    <div
+                        class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                        data-certificate="docs/sertifikat/Sertifikat_Duta Ardan_Associate Data Scientist + Python - Nasional.pdf"
+                        data-title="Associate Data Scientist + Python"
+                        role="button"
+                        tabindex="0"
+                    >
+                        <div>
+                            <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold mb-4 text-lg">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <span class="text-xs font-bold text-brand-600 uppercase">Komdigi DTS 2026</span>
+                            <h4 class="font-heading font-bold text-base text-slate-800 mt-1">Associate Data Scientist + Python</h4>
+                            <p class="text-slate-500 text-xs mt-2">Pusat Pengembangan Talenta Digital (31 JP). Menguasai data cleansing, annotation, Python, Pandas, & modeling.</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-brand-600 font-semibold flex items-center gap-2">
+                                <i class="fa-regular fa-eye"></i>
+                                Klik untuk melihat sertifikat
+                            </span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-brand-500 text-xs"></i>
+                        </div>
+                    </div>
+
+                    <!-- Sertifikat Dicoding AI -->
+                    <div data-certificate="docs/sertifikat/sertifikat_course_belajardasarai.pdf"
+                            data-title="Belajar Dasar AI - Dicoding Academy"
+                            role="button" tabindex="0"
+                            class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-400 transition-all flex flex-col justify-between cursor-pointer">
+                        <div>
+                            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold mb-4 text-lg">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <span class="text-xs font-bold text-emerald-600 uppercase">Dicoding Academy</span>
+                            <h4 class="font-heading font-bold text-base text-slate-800 mt-1">Belajar Dasar AI</h4>
+                            <p class="text-slate-500 text-xs mt-2">Memahami fondasi Artificial Intelligence, Machine Learning, Deep Learning, & pengolahan data.</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-brand-600 font-semibold flex items-center gap-2">
+                                <i class="fa-regular fa-eye"></i>
+                                Klik untuk melihat sertifikat
+                            </span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-brand-500 text-xs"></i>
+                        </div>
+                    </div>
+
+                    <!-- Sertifikat Kelas.com MS Office -->
+                    <div data-certificate="docs/sertifikat/Duta Ardan's-Mahir Ms. Office dari A-Z-Completion-Certificate_compressed.pdf"
+                        data-title="Mahir Ms. Office dari A-Z"
+                        role="button" tabindex="0"
+                        class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-400 transition-all flex flex-col justify-between cursor-pointer">
+                        <div>
+                            <div class="w-10 h-10 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-bold mb-4 text-lg">
+                                <i class="fa-solid fa-file-excel"></i>
+                            </div>
+                            <span class="text-xs font-bold text-amber-600 uppercase">Kelas.com</span>
+                            <h4 class="font-heading font-bold text-base text-slate-800 mt-1">Mahir Ms. Office dari A-Z</h4>
+                            <p class="text-slate-500 text-xs mt-2">Penguasaan fitur tingkat lanjut Ms. Word, analisis data laporan Excel, & penyusunan PowerPoint profesional.</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-brand-600 font-semibold flex items-center gap-2">
+                                <i class="fa-regular fa-eye"></i>
+                                Klik untuk melihat sertifikat
+                            </span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-brand-500 text-xs"></i>
+                        </div>
+                    </div>
+
+                    <!-- Sertifikat Komdigi Micro Skill -->
+                   <div data-certificate="docs/sertifikat/Sertifikat_Duta Ardan_Pengenalan Data Science dan Pemanfaatannya di Berbagai Sektor (1).pdf"
+                        data-title="Pengenalan Data Science Sektor Digital"
+                        role="button" tabindex="0"
+                        class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-400 transition-all flex flex-col justify-between cursor-pointer">
+                        <div>
+                            <div class="w-10 h-10 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center font-bold mb-4 text-lg">
+                                <i class="fa-solid fa-chart-simple"></i>
+                            </div>
+                            <span class="text-xs font-bold text-purple-600 uppercase">Komdigi Micro Skill</span>
+                            <h4 class="font-heading font-bold text-base text-slate-800 mt-1">Pengenalan Data Science Sektor Digital</h4>
+                            <p class="text-slate-500 text-xs mt-2">Pemahaman peran Data Scientist, pemanfaatan Data Science lintas sektor bisnis & tantangan masa depan.</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-brand-600 font-semibold flex items-center gap-2">
+                                <i class="fa-regular fa-eye"></i>
+                                Klik untuk melihat sertifikat
+                            </span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-brand-500 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SUB-SECTION 2: SERTIFIKAT ORGANISASI & KEPANITIAAN -->
+            <div>
+                <h3 class="font-heading font-bold text-xl text-slate-800 mb-6 flex items-center gap-2">
+                    <i class="fa-solid fa-id-card-clip text-brand-600"></i>
+                    Sertifikat Pengalaman Organisasi & Kepanitiaan
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div
+                        class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between cursor-pointer"
+                        data-certificate="docs/sertifikat/sertifikat_organisasi.pdf"
+                        data-title="Associate Data Scientist + Python"
+                        role="button"
+                        tabindex="0"                    >
+                        <div>
+                            <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold mb-4 text-lg">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <span class="text-xs font-bold text-brand-600 uppercase">Sertifikat Panitia</span>
+                            <h4 class="font-heading font-bold text-base text-slate-800 mt-1">Program Pengenalan Kampus</h4>
+                            <p class="text-slate-500 text-xs mt-2">Bertindak sebagai PANITIA dalam program pengenalan kampus Fakultas Ilmu Komputer Universitas Bandar Lampung dengan tema "Membentuk Generasi yang Tangguh, Berkarakter dan Inovatif"</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-brand-600 font-semibold flex items-center gap-2">
+                                <i class="fa-regular fa-eye"></i>
+                                Klik untuk melihat sertifikat
+                            </span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-brand-500 text-xs"></i>
+                        </div>
+                    </div>
+
+                    <div data-certificate="docs/sertifikat/sertifikat_organisasi.pdf"
+                        data-title="Pengenalan Data Science Sektor Digital"
+                        role="button" tabindex="0"
+                        class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-400 transition-all flex flex-col justify-between cursor-pointer">
+                        <div>
+                            <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold mb-4 text-lg">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <span class="text-xs font-bold text-brand-600 uppercase">Sertifikat Panitia</span>
+                            <h4 class="font-heading font-bold text-base text-slate-800 mt-1">Seminar Nasional "Peran Media Pers dalam Era Digital"</h4>
+                            <p class="text-slate-500 text-xs mt-2">Diberikan sebagai PANITIA Kegiatan Seminar Nasional yang diselenggarakan oleh Badan Eksekutif Mahasiswa (BEM) Fakultas Ilmu Komputer Universitas Bandar Lampung</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-brand-600 font-semibold flex items-center gap-2">
+                                <i class="fa-regular fa-eye"></i>
+                                Klik untuk melihat sertifikat
+                            </span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-brand-500 text-xs"></i>
+                        </div>
+                    </div>
+
+                    <div data-certificate="docs/sertifikat/penghargaan.jpg"
+                            data-title="Belajar Dasar AI - Dicoding Academy"
+                            role="button" tabindex="0"
+                            class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-400 transition-all flex flex-col justify-between cursor-pointer">
+                        <div>
+                            <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold mb-4 text-lg">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <span class="text-xs font-bold text-brand-600 uppercase">Sertifikat Penghargaan</span>
+                            <h4 class="font-heading font-bold text-base text-slate-800 mt-1">Indonesia Youth Science & Knowledge Olympiad 2025</h4>
+                            <p class="text-slate-500 text-xs mt-2">Mengikuti perlombaan tingkat perguruan tinggi nasional dengan meraih medali emas bidang Sejarah</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-brand-600 font-semibold flex items-center gap-2">
+                                <i class="fa-regular fa-eye"></i>
+                                Klik untuk melihat sertifikat
+                            </span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-brand-500 text-xs"></i>
+                        </div>
+                    </div>
+                        <div data-certificate="docs/sertifikat/sertilomba2.jpg"
+                            data-title="Belajar Dasar AI - Dicoding Academy"
+                            role="button" tabindex="0"
+                            class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-400 transition-all flex flex-col justify-between cursor-pointer">
+                        <div>
+                            <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold mb-4 text-lg">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <span class="text-xs font-bold text-brand-600 uppercase">Sertifikat Penghargaan</span>
+                            <h4 class="font-heading font-bold text-base text-slate-800 mt-1">Indonesia Academic Science Challange 2025</h4>
+                            <p class="text-slate-500 text-xs mt-2">Mengikuti perlombaan tingkat perguruan tinggi nasional dengan meraih medali emas bidang Bahasa Indonesia</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-brand-600 font-semibold flex items-center gap-2">
+                                <i class="fa-regular fa-eye"></i>
+                                Klik untuk melihat sertifikat
+                            </span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-brand-500 text-xs"></i>
+                        </div>
+                    </div>
+                    
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <h2 class="text-xs font-semibold uppercase text-brand-600 tracking-wider mb-2">Mari Terhubung</h2>
+                        <p class="font-heading font-bold text-3xl sm:text-4xl text-slate-900">Tertarik Bekerja Sama?</p>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        Saya selalu terbuka untuk berdiskusi mengenai peluang karir full-time, proyek website, atau proyek analisis data. Silakan hubungi saya melalui saluran berikut:
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        
+
+                        <div class="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                            <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center font-bold">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400 font-medium">Email</span>
+                                <p class="text-sm font-semibold text-slate-800">dutaardan635@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                            <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400 font-medium">Lokasi</span>
+                                <p class="text-sm font-semibold text-slate-800">Bandar Lampung, Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-slate-50 p-8 rounded-3xl border border-slate-200">
+                    <form id="contact-form" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Nama Lengkap</label>
+                                <input type="text" id="form-name" required placeholder="Masukkan nama Anda" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-sm focus:outline-none focus:border-brand-500 transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Email Anda</label>
+                                <input type="email" id="form-email" required placeholder="nama@email.com" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-sm focus:outline-none focus:border-brand-500 transition-colors">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Subjek Pesan</label>
+                            <input type="text" id="form-subject" required placeholder="Penawaran Kerja / Diskusi Project" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-sm focus:outline-none focus:border-brand-500 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Pesan</label>
+                            <textarea id="form-message" rows="4" required placeholder="Tuliskan pesan Anda di sini..." class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 text-sm focus:outline-none focus:border-brand-500 transition-colors"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm rounded-xl transition-all shadow-md shadow-brand-600/20">
+                            Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 bg-slate-900 text-slate-400 text-xs border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 Duta Ardan. All rights reserved.</p>
+            <p class="text-slate-500">Designed with precision &amp; modern UI/UX principles.</p>
+        </div>
+    </footer>
+
+    
+    <div id="certificate-modal"
+        class="fixed inset-0 z-[60] hidden bg-slate-900/70 backdrop-blur-sm items-center justify-center p-4">
+
+        <div class="bg-white w-full max-w-5xl rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh]">
+
+            <!-- Modal Header -->
+            <div class="px-5 py-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between gap-4">
+                <div class="flex items-center gap-3 min-w-0">
+                    <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-certificate text-lg"></i>
+                    </div>
+
+                    <div class="min-w-0">
+                        <h3 id="certificate-title"
+                            class="font-heading font-bold text-slate-800 text-base truncate">
+                            Sertifikat
+                        </h3>
+                        <p class="text-xs text-slate-500">Dokumen Sertifikat</p>
+                    </div>
+                </div>
+
+                <button id="close-certificate-btn"
+                        type="button"
+                        aria-label="Tutup sertifikat"
+                        class="text-slate-400 hover:text-red-500 p-2 rounded-lg transition-colors shrink-0">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content -->
+            <div class="flex-1 overflow-auto bg-slate-100 p-3 sm:p-5 flex items-center justify-center min-h-[300px]">
+
+                <!-- PDF Preview -->
+                <iframe id="certificate-pdf"
+                        class="hidden w-full h-[70vh] rounded-lg bg-white border border-slate-200"
+                        title="Preview PDF Sertifikat">
+                </iframe>
+
+                <!-- Image Preview -->
+                <img id="certificate-image"
+                    class="hidden max-w-full max-h-[70vh] object-contain rounded-lg shadow-sm"
+                    alt="Preview Sertifikat">
+
+                <!-- Error Message -->
+                <div id="certificate-error" class="hidden text-center py-12">
+                    <i class="fa-solid fa-file-circle-exclamation text-4xl text-slate-400 mb-3"></i>
+                    <p class="font-semibold text-slate-700">Sertifikat tidak dapat ditampilkan.</p>
+                    <p class="text-sm text-slate-500 mt-1">Pastikan file tersedia dan nama file sudah benar.</p>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="px-5 py-4 bg-white border-t border-slate-200 flex justify-end gap-3">
+                <a id="open-certificate-new-tab"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-4 py-2 rounded-xl bg-brand-600 text-white text-xs font-semibold hover:bg-brand-700 transition-colors flex items-center gap-2">
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                    Buka Tab Baru
+                </a>
+
+                <button id="close-certificate-modal-btn"
+                        type="button"
+                        class="px-4 py-2 rounded-xl bg-slate-200 text-slate-700 text-xs font-semibold hover:bg-slate-300 transition-colors">
+                    Tutup
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CV PREVIEW MODAL -->
+    <div id="cv-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col">
+            <div class="px-6 py-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <i class="fa-regular fa-file-pdf text-brand-600 text-lg"></i>
+                    <h3 class="font-heading font-bold text-slate-800 text-base">Curriculum Vitae - Duta Ardan, S.Kom</h3>
+                </div>
+                <button id="close-cv-btn" class="text-slate-400 hover:text-slate-600 p-1 rounded-lg">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+            
+            <div class="p-6 overflow-y-auto space-y-6 text-slate-700 text-sm">
+                <div class="p-4 bg-brand-50 rounded-xl border border-brand-100">
+                    <h4 class="font-bold text-brand-900 mb-1">DUTA ARDAN</h4>
+                    <p class="text-xs text-brand-700 mb-2">Bandar Lampung | dutaardan635@gmail.com</p>
+                    <p class="text-xs text-brand-800 leading-relaxed">
+                        Lulusan S1 Informatika dengan kemampuan software development dan analisis data. Memiliki pengalaman menggunakan Laravel, MySQL, dan JavaScript dalam pengembangan aplikasi web, serta kemampuan pengolahan data, pelaporan kinerja, komunikasi, dan koordinasi tim.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-800 border-b border-slate-200 pb-1 mb-2 text-xs uppercase tracking-wide">Pendidikan Utama</h4>
+                    <div class="flex justify-between font-semibold text-slate-800">
+                        <span>Universitas Bandar Lampung (S1 Informatika)</span>
+                        <span>IPK 3.64 / 4.00</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-800 border-b border-slate-200 pb-1 mb-2 text-xs uppercase tracking-wide">Pengalaman Kerja & Organisasi</h4>
+                    <ul class="list-disc list-inside space-y-1 text-xs text-slate-600">
+                        <li><strong>Peachy Keen</strong> – Captain Server (Feb 2026 – Okt 2026)</li>
+                        <li><strong>Tunas Dwipa Matra</strong> – Digital Marketing Intern (Juni 2025 – Ags 2025)</li>
+                        <li><strong>BEM Fakultas Ilmu Komputer UBL</strong> – Koordinator Lapangan (2025)</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-800 border-b border-slate-200 pb-1 mb-2 text-xs uppercase tracking-wide">Sertifikasi & Proyek Utama</h4>
+                    <ul class="list-disc list-inside space-y-1 text-xs text-slate-600">
+                        <li>Associate Data Scientist + Python - Komdigi DTS (2026)</li>
+                        <li>Belajar Dasar AI - Dicoding Academy (2025)</li>
+                        <li>Skripsi Web Face Recognition & Geofencing + Power BI Tourism Data Analysis</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="px-6 py-4 bg-slate-50 border-t border-slate-200 flex justify-end gap-3">
+                <button id="close-cv-modal-btn" class="px-4 py-2 rounded-xl bg-slate-200 text-slate-700 font-medium text-xs hover:bg-slate-300 transition-colors">
+                    Tutup
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JavaScript File Link -->
+    <script src="js/main.js"></script>
+</body>
+</html>
