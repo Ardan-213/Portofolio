@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Atur judul sertifikat
         if (certificateTitle) {
-            certificateTitle.textContent = title || 'Sertifikat';
+            certificateTitle.textContent = title || 'Dokumentasi';
         }
 
         // Atur link untuk membuka file di tab baru
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     certificateImage.classList.add('hidden');
 
                     if (certificateError) {
-                        certificateError.textContent = 'Sertifikat tidak dapat ditampilkan. Periksa lokasi dan nama file.';
+                        certificateError.textContent = 'Dokumentasi tidak dapat ditampilkan. Periksa lokasi dan nama file.';
                         certificateError.classList.remove('hidden');
                     }
                 };
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         card.addEventListener('click', function () {
             const filePath = this.getAttribute('data-certificate');
-            const title = this.getAttribute('data-certificate-title');
+            const title = this.getAttribute('data-dokumentasi-title');
 
             if (filePath) {
                 openCertificateModal(filePath, title);
